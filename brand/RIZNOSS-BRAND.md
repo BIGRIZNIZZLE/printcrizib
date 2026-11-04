@@ -1,0 +1,11 @@
+# RIZNOSS brand system (approved by user 2026-10-21)
+- RIZNOSS = the clan/house (user's lifelong nickname from a late friend). Every app = a numbered "Chamber".
+- Chamber 01: AutoLog, alias "The Mileage Monk" (https://bigriznizzle.github.io/autolog/).
+- Chamber 02: Tool Crizib (first shipped as "ToolLog"), alias "The Shaolin Arsenal" (https://bigriznizzle.github.io/toolcrizib/; old /toollog/ redirects). Icon: faceted silver drill on a black battery with a blue metallic stripe (toolcrizib repo brand/icon-source.jpg).
+- Chamber 03: Print Crizib (working name; user may rename), alias "The Filament Forge" (https://bigriznizzle.github.io/printcrizib/, invite page /printcrizib/join/). 3D printing tracker: printers, AMS, filament spools with grams left, resin, parts, consumables, tools, purchases with coupon, price protection and warranty. Icon: silver 3D printer on black with a blue glow (printcrizib repo brand/icon-source.jpg). Palette: black and silver with corporate blue #2f63c9 as the main color (lighter #7ea2ec in dark mode); no gold. Category art: early-'90s comic-style icons in corporate blue (printer, AMS, spool, resin, nozzle, plate, tools, parts, consumables, dryer, printed part; printcrizib brand/icons-src). Sync: shared Supabase records table, ids pc:*, owner __printcrizib. Future apps: Chamber 04...
+- Shared emblem: brushed silver faceted R in hexagon crest on gloss black, accent medium blue metallic (1994 Chevy-style) on inner hex line and wordmark underline (brand/riznoss-emblem.jpg). Palette: black, silver, medium blue metallic. NO gold.
+- Splash: "RIZNOSS presents · Chamber NN" (01 AutoLog, 02 Tool Crizib, 03 Print Crizib). About screen sign-off: "Protect ya data." Optional dedication line to the friend (ask user for wording/name).
+- Domains: riznoss.com (user acquiring), apps at <app>.riznoss.com.
+- Original marks only; Wu-Tang-inspired undertone, no copied logos/lyrics beyond the short homage phrase.
+- Wordmark: RIZNOSS in heavy riveted block letters, forged/brushed steel look.
+- Crest: upright rectangular brushed-silver frame with blue metallic inner line (replaced hexagon); larger faceted R. Hex version kept as riznoss-emblem-hex.jpg.

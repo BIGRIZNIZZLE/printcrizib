@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Print Crizib: 3D Printing Gear &amp; Filament</title>
+<meta name="description" content="Track your 3D printers, filament spools, resin, parts and every purchase: price paid, coupons, price-protection and warranty dates, grams left. Works offline; your data stays on your device.">
+<meta name="theme-color" content="#f3f5f9" id="themeColor">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Print Crizib">
+<meta property="og:title" content="Print Crizib · RIZNOSS Chamber 03">
+<meta property="og:description" content="Your 3D printing gear and filament: what you paid, price-protection and warranty dates, grams left. Free, private, works offline.">
+<meta property="og:image" content="https://bigriznizzle.github.io/printcrizib/img/og-printcrizib.jpg">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="logo" aria-hidden="true"></span><span>Print Crizib</span><a href="#/about" class="rz-mark" aria-label="About Print Crizib, a RIZNOSS app"><img src="img/riznoss-crest-solid.webp" alt="" width="22" height="25" decoding="async"></a></div>
+  <div class="top-right"><a href="#/dash" class="bell" id="bell" aria-label="Reminders on the dashboard"><svg viewBox="0 0 24 24" class="ic"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg><span class="bell-count" id="bellCount" hidden></span></a></div>
+</header>
+<button type="button" class="update-bar" id="updateBar" hidden>Update available, tap to reload</button>
+<main id="app" tabindex="-1"></main>
+<button class="fab" id="fab" aria-label="Add" hidden><svg viewBox="0 0 24 24" class="ic"><path d="M12 5v14M5 12h14"/></svg></button>
+<nav class="tabbar" id="tabbar">
+  <a href="#/dash" data-tab="dash"><svg viewBox="0 0 24 24" class="ic"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg><span>Dashboard</span></a>
+  <a href="#/inv" data-tab="inv"><svg viewBox="0 0 24 24" class="ic"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M4 8h16M9 8v4h6V8M8 17h8"/></svg><span>Inventory</span></a>
+  <a href="#/filament" data-tab="filament"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v6M12 15v6"/></svg><span>Filament</span></a>
+  <a href="#/prints" data-tab="prints"><svg viewBox="0 0 24 24" class="ic"><path d="M6 9V2h12v7"/><rect x="2" y="9" width="20" height="9" rx="2"/><path d="M6 14h12v8H6z"/></svg><span>Prints</span></a>
+  <a href="#/more" data-tab="more"><svg viewBox="0 0 24 24" class="ic"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg><span>Settings</span></a>
+</nav>
+<dialog id="sheet" class="sheet"><form method="dialog" class="sheet-inner" id="sheetForm" novalidate></form></dialog>
+<dialog id="confirm" class="confirm"><div class="confirm-inner" id="confirmInner"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+<script src="app.js"></script>
+<script src="sync.js"></script>
+</body>
+</html>

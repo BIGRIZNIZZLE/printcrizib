@@ -1,0 +1,18 @@
+{
+  "name": "Print Crizib",
+  "short_name": "Print Crizib",
+  "description": "Track 3D printers, filament spools, resin, parts and every purchase: price paid, coupons, price protection, warranty and grams left. Works offline.",
+  "id": "./",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#05070d",
+  "theme_color": "#07090f",
+  "categories": ["utilities", "productivity", "lifestyle"],
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
