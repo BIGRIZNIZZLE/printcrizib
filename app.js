@@ -1,7 +1,7 @@
 /* Print Crizib · RIZNOSS Chamber 03 — 3D printing purchases, filament inventory and print log.
    Data lives in localStorage (records) + IndexedDB (photos). Modeled on Tool Crizib (Chamber 02). */
 'use strict';
-const KEY = 'printcrizib:data:v1', BAK = 'printcrizib:backup:v1', SEEDED = 'printcrizib:seeded', APP_VERSION = '1';
+const KEY = 'printcrizib:data:v1', BAK = 'printcrizib:backup:v1', SEEDED = 'printcrizib:seeded', APP_VERSION = '2';
 const DATA_VERSION = 1;
 const $ = (s, r = document) => r.querySelector(s);
 const $$ = (s, r = document) => [...r.querySelectorAll(s)];

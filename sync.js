@@ -151,10 +151,16 @@
         if (!mine(k)) continue; // belt and braces: the query already filters to pc: rows
         if (!cursor || later(row.server_updated_at, cursor)) cursor = row.server_updated_at;
         if (m && m.first) {
-          // deleted in the cloud but still here: keep it and re-upload, except the untouched starter item (deleted on purpose on another device)
-          if (row.deleted && !pristineSeed(local.get(k))) { delete m.first; m.u = nowISO(); continue; }
-          if (hash(row.data) === m.h) { meta.recs[k] = { h: m.h, u: row.updated_at }; continue; }
-          if (local.has(k)) conflicts.push({ key: k, local: local.get(k).data, cloudUpdated: row.updated_at, at: nowISO() });
+          // First sync for this account on this device.
+          // Cloud deleted + local is NOT the untouched starter → keep local and re-upload.
+          // Cloud deleted + local IS the untouched starter → fall through and apply the tombstone
+          // (don't take the hash-match shortcut: a tombstone can still carry the old seed payload).
+          if (row.deleted) {
+            if (!pristineSeed(local.get(k))) { delete m.first; m.u = nowISO(); continue; }
+          } else {
+            if (hash(row.data) === m.h) { meta.recs[k] = { h: m.h, u: row.updated_at }; continue; }
+            if (local.has(k)) conflicts.push({ key: k, local: local.get(k).data, cloudUpdated: row.updated_at, at: nowISO() });
+          }
         } else if (m && !later(row.updated_at, m.u)) continue; // ours is the same or newer
         if (row.deleted) { local.delete(k); meta.recs[k] = { h: 'del', u: row.updated_at, del: 1 }; }
         else { local.set(k, { kind: row.kind, id: row.id, data: row.data }); meta.recs[k] = { h: hash(row.data), u: row.updated_at }; }

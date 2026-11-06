@@ -1,5 +1,5 @@
 /* Print Crizib service worker: offline app shell, lazily cached catalog, update prompt. */
-const CACHE = 'printcrizib-v1';
+const CACHE = 'printcrizib-v2';
 const ASSETS = [
   './', './index.html', './styles.css', './app.js', './sync.js', './manifest.json', './favicon.ico',
   './icons/favicon-32.png', './icons/favicon-16.png', './icons/logo-192.png', './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png', './icons/apple-touch-icon.png',
